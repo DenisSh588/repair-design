@@ -6,19 +6,50 @@ body
   font-family: 'Futura Book', sans-serif
   font-size: 1rem
 .section
-  &-title
-    text-align: center
-    text-transform: uppercase
-    font-family: 'Yeseva One', cursive
-    &__image
-      display: flex
-      justify-content: center
-      align-items: center
-      &::before, &::after
-        content: ''
-        width: 32px
-        height: 2px
-        background-color: $primary
-        margin: 0 10px
-
+    padding: 60px 0
+    &--dark
+        background-color: $dark
+        color: $light
+    &-title
+        text-align: center
+        text-transform: uppercase
+        font-family: 'Yeseva One', cursive
+        &--left
+            text-align: left
+        &__heading
+            font-family: 'Yeseva One', cursive
+            line-height: 138.6%
+            text-transform: uppercase
+            &--primary
+                color: $primary
+        &__word
+            display: flex
+            align-items: center
+            &::after
+                content: ''
+                width: 90px
+                height: 1px
+                background-color: $primary
+                margin-left: 2rem
+        &__text
+            line-height: 2.07rem
+            max-width: 31.57rem
+            font-family: 'Futura Book'
+        &__image
+            display: flex
+            justify-content: center
+            align-items: center
+            &:before, &:after
+                content: ''
+                width: 32px
+                height: 2px
+                background-color: $primary
+                margin: 0 10px
+    &-subtitle
+        margin: auto
+        max-width: 741px
+        text-align: center
+        font-family: Futura Book
+        line-height: 1.928rem
+        font-size: 1.428rem
         
