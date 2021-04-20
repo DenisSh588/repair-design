@@ -27,22 +27,33 @@ $(document).ready(function () {
         modal.toggleClass('modal--visible'); 
      });
 
-     var mySwiper = new Swiper ('.swiper-container',{
-         loop: true,
-         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-         pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-          },
-     });
-        var next = $('.swiper-button-next');
-        var prev = $('.swiper-button-prev');
-        var bullets = $('.swiper-pagination');
-
-        next.css('left', prev.width() )
-
+     const swiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        loop: true,
+      
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
+  
+      // Настройка навигации слайдера
+      var next = $('.swiper-button-next');
+      var prev = $('.swiper-button-prev');
+      var bullets = $('.swiper-pagination');
+      next.css('left', prev.width() + 10 + bullets.width() +10);
+      bullets.css('left', prev.width() + 10);
 
 });
