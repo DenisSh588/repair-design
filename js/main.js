@@ -86,7 +86,7 @@ $(document).ready(function () {
             email: "Введите в формате name@domain.com"
           }
         },
-      submitHandler: function(form) {
+        submitHandler: function(form) {
           $.ajax({
               type: "POST",
               url: "send.php",
